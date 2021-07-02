@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DarkRPCDiscord.iml" filepath="$PROJECT_DIR$/DarkRPCDiscord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CustomDiscordRPC.iml" filepath="$PROJECT_DIR$/CustomDiscordRPC.iml" />
     </modules>
   </component>
 </project>
