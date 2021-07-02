@@ -14,13 +14,20 @@ public class Discord {
      * @param appId
      */
     public Discord(String appId) throws IOException {
-        DiscordRPC lib = DiscordRPC.INSTANCE;
         DiscordEventHandlers handlers = new DiscordEventHandlers();
-        handlers.ready = (user) -> System.out.println("Ready!");
+        handlers.ready = (user) -> {
+            System.out.println("-------------------------------------");
+            System.out.println("CustomDiscordRPC iniciado com sucesso!");
+            System.out.println("Você está logado como: " + user.username);
+            System.out.println("-------------------------------------");
+        };
 
+        // Inicialização do Discord RPC.
+        DiscordRPC lib = DiscordRPC.INSTANCE;
         lib.Discord_Initialize(appId, handlers, true, "");
         lib.Discord_UpdatePresence(new DiscordService().setDiscordConfigurations());
 
+        // Runtime, deixar a Theread trabalhar para atualizar constantemente.
         new Thread(() -> {
             while (!Thread.currentThread().isInterrupted()) {
                 lib.Discord_RunCallbacks();
