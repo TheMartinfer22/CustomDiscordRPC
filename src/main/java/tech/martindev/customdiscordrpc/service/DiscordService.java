@@ -1,8 +1,10 @@
-package tech.martindev.simpledrpc.service;
+package tech.martindev.customdiscordrpc.service;
 
 import club.minnced.discord.rpc.DiscordRichPresence;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 
 public class DiscordService {
@@ -12,7 +14,7 @@ public class DiscordService {
      * @return
      * @throws IOException
      */
-    public DiscordRichPresence setDiscordConfigurations() throws IOException {
+    public DiscordRichPresence setDiscordConfigurations() throws IOException, FileNotFoundException {
 
         DiscordRichPresence presence = new DiscordRichPresence();
         Properties properties = new Properties();
@@ -28,6 +30,9 @@ public class DiscordService {
         presence.smallImageText = properties.getProperty("SMALL_IMAGE_TEXT");
         presence.details = properties.getProperty("DETAILS");
         presence.state = properties.getProperty("STATE");
+
+
         return presence;
+
     }
 }

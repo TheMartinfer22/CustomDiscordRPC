@@ -1,6 +1,6 @@
-package tech.martindev.simpledrpc;
+package tech.martindev.customdiscordrpc;
 
-import tech.martindev.simpledrpc.api.Discord;
+import tech.martindev.customdiscordrpc.api.Discord;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -1,8 +1,8 @@
-package tech.martindev.simpledrpc.api;
+package tech.martindev.customdiscordrpc.api;
 
 import club.minnced.discord.rpc.DiscordEventHandlers;
 import club.minnced.discord.rpc.DiscordRPC;
-import tech.martindev.simpledrpc.service.DiscordService;
+import tech.martindev.customdiscordrpc.service.DiscordService;
 
 import java.io.IOException;
 
